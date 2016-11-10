@@ -20,5 +20,8 @@
         "System.Reflection.TypeExtensions": "4.1.0"
       }
     }
+  },
+  "runtimes": {
+    "win": {}
   }
 }

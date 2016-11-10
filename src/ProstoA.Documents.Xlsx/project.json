@@ -12,5 +12,8 @@
         "WindowsBase": "4.0.0.0"
       }
     }
+  },
+  "runtimes": {
+    "win": {}
   }
 }
