@@ -43,6 +43,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Metamodel\Object\DataObjectExtensions.cs" />
+    <Compile Include="Model\Abstractions\Deferred.cs" />
+    <Compile Include="Model\Abstractions\ExpirationPolicy.cs" />
+    <Compile Include="Model\Abstractions\Expiring.cs" />
+    <Compile Include="Model\Abstractions\IDeferredValue.cs" />
+    <Compile Include="Model\Abstractions\IExpirationPolicy.cs" />
+    <Compile Include="Model\Abstractions\IExpiringValue.cs" />
+    <Compile Include="Model\Abstractions\IPrimitiveValue.cs" />
+    <Compile Include="Model\Abstractions\IValue.cs" />
     <Compile Include="Store\Abstractions\IDataStore.cs" />
     <Compile Include="Store\Mappers\ICollectionMapper.cs" />
     <Compile Include="Store\Mappers\IMapper.cs" />
