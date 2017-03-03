@@ -28,7 +28,7 @@ namespace ProstoA.Data.Model.Abstractions {
 
         public DateTimeOffset? UpToDate => _upToDate;
 
-        public bool Expired => UpToDate.HasValue && ExpirationPolicy.Check(UpToDate.Value, DateTimeOffset.Now);
+        public bool Expired => (_deferredValue?.HasValue).GetValueOrDefault() && ExpirationPolicy.Check(UpToDate.Value, DateTimeOffset.Now);
 
         public IExpirationPolicy ExpirationPolicy { get; }
 

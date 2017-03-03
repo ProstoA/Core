@@ -43,6 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Metamodel\Object\DataObjectExtensions.cs" />
+    <Compile Include="Model\Abstractions\CollectionBaseValue.cs" />
+    <Compile Include="Model\Abstractions\CompositeValueField.cs" />
+    <Compile Include="Model\Abstractions\CompositeValueIndexer.cs" />
     <Compile Include="Model\Abstractions\Deferred.cs" />
     <Compile Include="Model\Abstractions\ExpirationPolicy.cs" />
     <Compile Include="Model\Abstractions\Expiring.cs" />
@@ -51,6 +54,9 @@
     <Compile Include="Model\Abstractions\IExpiringValue.cs" />
     <Compile Include="Model\Abstractions\IPrimitiveValue.cs" />
     <Compile Include="Model\Abstractions\IValue.cs" />
+    <Compile Include="Model\Abstractions\ListValue.cs" />
+    <Compile Include="Model\Abstractions\MapValue.cs" />
+    <Compile Include="Model\Abstractions\PagingListValue.cs" />
     <Compile Include="Store\Abstractions\IDataStore.cs" />
     <Compile Include="Store\Mappers\ICollectionMapper.cs" />
     <Compile Include="Store\Mappers\IMapper.cs" />
