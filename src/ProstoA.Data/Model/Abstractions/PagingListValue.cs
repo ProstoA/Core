@@ -7,7 +7,7 @@ namespace ProstoA.Data.Model.Abstractions {
         public PagingListValue(Func<int, IEnumerable<IValue>> reader) : base(Prepare(reader)) { }
 
         protected override IValueItem MakeValueItem(IEnumerable<IValue> items, int index) {
-            return new CompositeValueIndexer(index, new ListValue(items));
+            return new CompositeValueIndexer(index, new ListValue(items), this);
         }
 
         private static IEnumerable<IEnumerable<IValue>> Prepare(Func<int, IEnumerable<IValue>> reader) {

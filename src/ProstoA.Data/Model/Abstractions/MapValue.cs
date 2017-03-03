@@ -5,7 +5,7 @@ namespace ProstoA.Data.Model.Abstractions {
         public MapValue(IDictionary<string, IValue> values) : base(values) { }
 
         protected override IValueItem MakeValueItem(KeyValuePair<string, IValue> item, int index) {
-            return new CompositeValueField(item.Key, item.Value);
+            return new CompositeValueField(item.Key, item.Value, this);
         }
     }
 }

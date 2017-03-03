@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 
 using ProstoA.Data.Metamodel;
+using ProstoA.Data.Model.Abstractions;
 using ProstoA.Security;
 
 namespace ProstoA.Workflow {
@@ -8,7 +9,7 @@ namespace ProstoA.Workflow {
     /// Workflow Instance
     /// </summary>
     public interface IWorkflowContext {
-        IDataObject Data { get; }
+        IObjectValue Data { get; }
 
         IUserContext User { get; }
 
@@ -49,10 +50,8 @@ namespace ProstoA.Workflow {
     /// <summary>
     /// Workflow Definition
     /// </summary>
-    public interface IWorkflow {
+    public interface IWorkflow : IDisplayModel {
         IObjectIdentity Name { get; }
-
-        IObjectDisplay Display { get; }
 
         /// <summary>
         /// where IWorkflowState => null
@@ -66,5 +65,4 @@ namespace ProstoA.Workflow {
     }
 
     /// Workflow Template
-
 }

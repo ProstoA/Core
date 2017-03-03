@@ -1,14 +1,13 @@
 ﻿using System.Collections.Generic;
 
 using ProstoA.Data.Metamodel;
+using ProstoA.Data.Model.Abstractions;
 
 namespace ProstoA.Workflow {
-    public interface IWorkflowTransition {
+    public interface IWorkflowTransition : IDisplayModel {
         IObjectIdentity Name { get; }
 
-        IObjectDisplay Display { get; }
-
-        IDataObject Data { get; }
+        IObjectValue Data { get; }
 
         IEnumerable<IWorkflowState> NextStates { get; }
     }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 namespace ProstoA.Data.Model.Abstractions {
-    public abstract class CollectionBaseValue<T> : ICompositeValue {
+    public abstract class CollectionBaseValue<T> : ICollectionValue {
         private readonly IEnumerable<T> _values;
 
         protected CollectionBaseValue(IEnumerable<T> values) {
@@ -18,6 +18,10 @@ namespace ProstoA.Data.Model.Abstractions {
 
 
         public IValueContainer Container {
+            get { throw new NotImplementedException(); }
+        }
+
+        public ICollectionValueItem this[int index] {
             get { throw new NotImplementedException(); }
         }
     }

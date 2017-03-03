@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-using ProstoA.Data.Metamodel;
+using ProstoA.Data.Model.Abstractions;
 
 namespace ProstoA.Data.Store {
     public interface IEntityStorage {
@@ -8,8 +8,8 @@ namespace ProstoA.Data.Store {
 
         //Task<TResult> ExecuteQuery<TResult>(IDataQuery<TResult> query);
 
-        Task AddOrUpdate(params IDataObject[] items);
+        Task AddOrUpdate(params IObjectValue[] items);
 
-        Task Remove(params IDataObject[] items);
+        Task Remove(params IObjectValue[] items);
     }
 }

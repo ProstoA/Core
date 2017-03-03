@@ -5,7 +5,7 @@ namespace ProstoA.Data.Model.Abstractions {
         public ListValue(IEnumerable<IValue> values) : base(values) { }
 
         protected override IValueItem MakeValueItem(IValue value, int index) {
-            return new CompositeValueIndexer(index, value);
+            return new CompositeValueIndexer(index, value, this);
         }
     }
 }
